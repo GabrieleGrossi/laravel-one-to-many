@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\Type;
 use App\Models\Project;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,8 +14,11 @@ class ProjectSeeder extends Seeder
     public function run(Faker $faker): void
     {
         //
+        $types = Type::all();
+
         for ($i=0; $i<70; $i++){
             $newProject = new Project();
+            $newProject->type_id= ($faker->randomElement($types))->id;
             $newProject->name =ucfirst($faker->unique()->words(5, true));
             $newProject->goal =ucfirst($faker->paragraph());
             $newProject->link =$faker->url();
