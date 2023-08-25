@@ -20,7 +20,7 @@ class TypeSeeder extends Seeder
         ];
 
         foreach ($types as $type){
-            $newType = new $Type();
+            $newType = new Type;
             $newType->name = $type;
             $newType->slug = $faker->slug();
             $newType->save();
