@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <h5 class="card-header">
-                    Featured
+                    {{$project->type->name}}
                 </h5>
                 <div class="card-body">
                     <h5 class="card-title">

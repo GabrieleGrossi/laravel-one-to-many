@@ -11,27 +11,37 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="mb-5">
-                    <label for="exampleFormControlInput1" class="form-label">
+                    <label for="name" class="form-label">
                         Name
                     </label>
                     <input type="text" class="form-control" id="name" placeholder="Insert your project's name" name="name">
+                </div>
+
+                @error('type')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                <div class="mb-5">
+                    <label for="type" class="form-label">
+                        Type
+                    </label>
+                    <input type="text" class="form-control" id="type" placeholder="Insert your project's type" name="type">
                 </div>
 
                 @error('goal')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="mb-5">
-                    <label for="image" class="form-label">
+                    <label for="goal" class="form-label">
                         Goal
                     </label>
-                    <input type="text" class="form-control" id="goal" placeholder="Insert the project's" name="goal">
+                    <input type="text" class="form-control" id="goal" placeholder="Insert the project's goal" name="goal">
                 </div>
 
                 @error('link')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="mb-5">
-                    <label for="content" class="form-label">
+                    <label for="link" class="form-label">
                         Link
                     </label>
                     <textarea class="form-control" id="link" rows="1" name="link">

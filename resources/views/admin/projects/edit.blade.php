@@ -18,6 +18,16 @@
                     <input type="text" class="form-control" id="name" placeholder="Insert your project's name" name="name" value="{{ old( 'name' , $project->name) }}">
                 </div>
 
+                @error('type')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                <div class="mb-5">
+                    <label for="type" class="form-label">
+                        Type
+                    </label>
+                    <input type="text" class="form-control" id="type" placeholder="Insert your project's type" name="type" value="{{ old( 'type' , $project->type->name) }}">
+                </div>
+
                 @error('goal')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
